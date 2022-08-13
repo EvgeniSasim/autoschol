@@ -1,0 +1,129 @@
+.faq-section {
+  position: relative;
+  z-index: 0;
+  background-color: $white;
+  padding-top: 174px;
+  padding-bottom: 192px;
+  @media (max-width: 870px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  @media (max-width: 490px) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  &::after {
+    content: url(../img/left_elem.svg);
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    z-index: -1;
+    @media (max-width: 870px) {
+      display: none;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    & > h3 {
+      text-align: center;
+      padding-bottom: 15px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 150%;
+    }
+    .faq-subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 27px;
+      h5 {
+        text-align: center;
+        max-width: 760px;
+      }
+    }
+    .accordin-list {
+      display: flex;
+      flex-direction: column;
+      &__item {
+        background-color: $white;
+        border-bottom: 2px solid $lightBlue;
+        padding: 0px 20px 0px 15px;
+        transition: background-color 0.3s;
+        margin-bottom: 5px;
+        &__title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 11px 0px 13px 0px;
+          cursor: pointer;
+          &::after {
+            content: url("../img/arrow_down_accordion_icon.svg");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        &__descr {
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transition: opacity 0.3s;
+        }
+        &.active {
+          background-color: $lightBlue;
+          border-radius: 12px;
+          transition: background-color 0.3s;
+          .accordin-list__item__title {
+            &::after {
+              content: url("../img/arrow_top_accordion_icon.svg");
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+          .accordin-list__item__descr {
+            opacity: 1;
+            max-height: 100%;
+            transition: opacity 0.3s;
+            & > p {
+              font-size: 14px;
+              line-height: 150%;
+              letter-spacing: -0.02em;
+              color: $primary;
+              & > a {
+                text-decoration: underline;
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.bg-section_blue {
+    background-color: $lightGray;
+    &::after {
+      content: url(../img/right_elem.svg);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: translate(0, 30%);
+      @media (max-width: 870px) {
+        display: none;
+      }
+    }
+    .container {
+      .accordin-list {
+        &__item {
+          border-radius: 0 12px;
+          &.active {
+            background-color: $white;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

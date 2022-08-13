@@ -1,0 +1,251 @@
+.main.top_bg.blog > .content-page-section > .container {
+  max-width: 762px;
+  margin: 0 auto;
+}
+section.promotions-section.blog-posts {
+  .container {
+    .blog-filters-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 18px;
+      .blog-filters {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 18px;
+        &__sort-list {
+          display: flex;
+          align-items: center;
+          & > button {
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 140%;
+            color: $primary;
+            &:not(:last-child) {
+              margin-right: 24px;
+            }
+            &:hover {
+              transition: color 0.3s;
+              color: $sky;
+            }
+            &.active {
+              color: $blue;
+              &::after {
+                content: url(../img/reset_btn_icon.svg);
+                width: 16px;
+                height: 18px;
+              }
+            }
+          }
+        }
+        &__dropdown {
+          & > button {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 3px;
+            font-size: 14px;
+            line-height: 140%;
+            color: $primary;
+            transition: color 0.3s;
+            &:hover {
+              transition: color 0.3s;
+              color: $sky;
+            }
+            &::after {
+              content: url(../img/arrow_blue_right_icon.svg);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-top: 2px;
+              padding-left: 5px;
+            }
+            &.active {
+              &::after {
+                content: url(../img/arrow_blue_down_icon.svg);
+              }
+            }
+          }
+        }
+      }
+      .dropdown-filter {
+        margin-bottom: 24px;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        z-index: -9;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &__list {
+          display: flex;
+          & > button {
+            position: relative;
+            border: none;
+            color: $primary;
+            background-color: $white;
+            box-shadow: 1px 1px 12px rgba(191, 207, 236, 0.2);
+            border-radius: 8px;
+            padding: 10px 16px;
+            opacity: 1;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 140%;
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+            &:hover {
+              opacity: 0.8;
+              transition: opacity 0.3s;
+            }
+            &.active {
+              color: $white;
+              &:hover {
+                color: transparent !important;
+                &::after {
+                  content: url(../img/close_filter_btn_icon.svg);
+                  position: absolute;
+                  width: 16px;
+                  height: 16px;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+          }
+        }
+        &.active {
+          position: initial;
+          z-index: 1;
+          visibility: visible;
+          opacity: 1;
+          transition: opacity 0.3s;
+        }
+      }
+    }
+    h4 {
+      font-size: 16px;
+    }
+    p {
+      color: rgba(86, 86, 123, 0.7);
+      line-height: 150%;
+      font-size: 14px;
+    }
+    .promotions-list__item__img {
+      position: relative;
+      max-height: 191px;
+      & > img {
+        max-height: initial;
+        height: 100%;
+      }
+      .filter-name-list {
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        & > span {
+          padding-left: 16px;
+          padding-right: 16px;
+          padding-top: 4.5px;
+          padding-bottom: 4.5px;
+          background: #12aaff;
+          border-radius: 0px 8px 0px 0px;
+          font-size: 14px;
+          line-height: 150%;
+          color: $white;
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .blog-post-attr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 5px;
+      .author-name {
+        color: rgba(86, 86, 123, 0.35);
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 150%;
+      }
+      .views-umber {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        line-height: 150%;
+        color: $sky;
+        &::before {
+          content: url(../img/eye_icon.svg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 10px;
+          width: 12px;
+          height: 12px;
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+}
+.simple-img-half-bg.blog-top-img {
+  .container {
+    .img-wrapper {
+      & > img {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+}
+.post-footer {
+  padding-top: 32px;
+  padding-bottom: 90px;
+  .container {
+    padding-top: 31px;
+    border-top: 1px solid #f3f6fb;
+    .blog-post-attr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.last-post-section.promotions-section.blog-posts {
+  padding-bottom: 37px;
+  padding-top: 37px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  background-color: $lightGray;
+  .container {
+    max-width: 762px;
+    margin: 0 auto;
+    h3 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      padding-bottom: 21px;
+    }
+    .promotions-list {
+      justify-content: space-between;
+      &__item {
+        width: calc(1 / 2 * 100% - 2rem);
+        min-width: 340px;
+      }
+    }
+  }
+}

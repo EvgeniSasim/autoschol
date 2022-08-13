@@ -1,0 +1,34 @@
+.error-404-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .error-page__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 17px;
+    }
+    & > h1 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 115%;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    & > a {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 115%;
+      text-decoration-line: underline;
+      color: $blue;
+    }
+  }
+}

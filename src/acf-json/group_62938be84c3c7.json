@@ -1,0 +1,317 @@
+{
+    "key": "group_62938be84c3c7",
+    "title": "Расписание школы",
+    "fields": [
+        {
+            "key": "field_6293e2e310aad",
+            "label": "Расписание",
+            "name": "schedule",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6293e34610aae",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Добавить расписание",
+            "sub_fields": [
+                {
+                    "key": "field_6293e73cd35eb",
+                    "label": "Расписание",
+                    "name": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_6293e34610aae",
+                    "label": "Название группы",
+                    "name": "ukazhite_tip_gruppy",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_629a7eab68e55",
+                    "label": "Выберите категорию прав",
+                    "name": "vyberite_kategoriyu_prav",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "cat_A": "Категория \"A\"",
+                        "cat_B": "Категория \"B\""
+                    },
+                    "default_value": "cat_B",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_62c360357df55",
+                    "label": "Виберете тип группы",
+                    "name": "tip_gruppy",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "vech": "Вечерняя",
+                        "utro": "Утренняя",
+                        "vuh": "Выходного дня"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6293e3a610aaf",
+                    "label": "Группа",
+                    "name": "gruppa",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_6293fd34862da",
+                            "label": "Идёт набор",
+                            "name": "idyot_nabor",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "4",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_6293e3bf10ab0",
+                            "label": "Дата начала",
+                            "name": "data_nachala",
+                            "type": "date_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "13",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "d\/m\/Y",
+                            "return_format": "d.m.Y",
+                            "first_day": 1
+                        },
+                        {
+                            "key": "field_6293e42f10ab1",
+                            "label": "Дата окончания",
+                            "name": "data_okonchaniya",
+                            "type": "date_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "13",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "d\/m\/Y",
+                            "return_format": "d.m.Y",
+                            "first_day": 1
+                        },
+                        {
+                            "key": "field_6293e45010ab2",
+                            "label": "Дни занятий",
+                            "name": "dni_zanyatij",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "15",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "pn": "Понедельник",
+                                "vt": "Вторник",
+                                "sr": "Среда",
+                                "cht": "Четверг",
+                                "pt": "Пятница",
+                                "sb": "Суббота",
+                                "vs": "Воскресенье"
+                            },
+                            "default_value": [
+                                "Понедельник"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "array",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_6293e54b10ab3",
+                            "label": "Время c",
+                            "name": "vremya_s",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "7",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "H:i",
+                            "return_format": "H:i"
+                        },
+                        {
+                            "key": "field_62b1ff4a6d7ef",
+                            "label": "Время до",
+                            "name": "vremya_do",
+                            "type": "time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "7",
+                                "class": "",
+                                "id": ""
+                            },
+                            "display_format": "H:i",
+                            "return_format": "H:i"
+                        },
+                        {
+                            "key": "field_6293e59410ab4",
+                            "label": "Стоимость",
+                            "name": "stoimost",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "15",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": 0,
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_6293e5c010ab5",
+                            "label": "Преподаватель",
+                            "name": "prepodavatel",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "instructors"
+                            ],
+                            "taxonomy": [
+                                "category:instruktora-i-prepodavateli"
+                            ],
+                            "filters": "",
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "schedule"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1656971632
+}

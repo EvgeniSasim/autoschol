@@ -1,0 +1,99 @@
+.schedule-section {
+  margin-bottom: 182px;
+  position: relative;
+  &::before {
+    content: url(../img/right_elem.svg);
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    @media (max-width: 1070px) {
+      display: none;
+    }
+  }
+  @media (max-width: 490px) {
+    margin-bottom: 90px;
+  }
+  .container {
+    & > h3 {
+      padding-bottom: 13px;
+      text-align: center;
+    }
+    .schedule-short-descr {
+      padding-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        height: 28px;
+      }
+    }
+    .schedule-filter {
+      padding-bottom: 24px;
+    }
+    .schedule-tables-wrapper {
+      padding-bottom: 32px;
+      overflow: hidden;
+      .schedule-table {
+        visibility: hidden;
+        top: 0;
+        opacity: 0;
+        position: absolute;
+        transform: scale(0);
+        z-index: -9;
+        overflow-x: scroll;
+        &.active {
+          min-width: 100%;
+          visibility: visible;
+          opacity: 1;
+          position: inherit;
+          z-index: 1;
+          transform: scale(1);
+          transition: all 0.3s;
+        }
+        table,
+        td {
+          border: 2px solid #f3f6fb;
+        }
+        td {
+          padding: 12px 16px;
+          text-align: center;
+          a,
+          span {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: -0.02em;
+          }
+          a {
+            text-decoration: underline;
+            &:not(:last-child) {
+              padding-bottom: 10px;
+            }
+          }
+        }
+        table {
+          border-collapse: collapse;
+          border-radius: 12px;
+          min-width: 100%;
+        }
+      }
+    }
+    .schedule-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.modal-wrapper {
+  span.description-text {
+    padding-bottom: 26px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: -0.02em;
+  }
+}

@@ -1,0 +1,141 @@
+.advantages-section {
+  position: relative;
+  background-color: $white;
+  padding-top: 192px;
+  padding-bottom: 192px;
+  @media (max-width: 870px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  @media (max-width: 490px) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  &::before {
+    content: url(../img/right_elem.svg);
+    position: absolute;
+    top: -35px;
+    left: 0;
+    transform: translate(0, -50%);
+    @media (max-width: 870px) {
+      display: none;
+    }
+  }
+  &::after {
+    content: url(../img/left_elem.svg);
+    position: absolute;
+    bottom: -115px;
+    right: 0;
+    z-index: 9;
+    @media (max-width: 870px) {
+      display: none;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    & > h3 {
+      text-align: center;
+      padding-bottom: 25px;
+    }
+    .advantage-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-left: -1rem;
+      margin-bottom: -1rem;
+      @media (max-width: 870px) {
+        justify-content: center;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        width: calc(1 / 2 * 100% - 1rem);
+        border: 2px solid $lightBlue;
+        box-sizing: border-box;
+        border-radius: 0px 24px;
+        padding: 16px 16px 32px 16px;
+        transition: box-shadow 0.3s;
+        min-width: 400px;
+        max-width: 560px;
+        @media (max-width: 870px) {
+          width: calc(100% - 1rem);
+          min-width: 300px;
+        }
+        &__head {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding-bottom: 30px;
+          @media (max-width: 490px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 15px;
+          }
+          & > h4 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            align-self: end;
+            @media (max-width: 490px) {
+              align-self: center;
+            }
+          }
+          &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & > img {
+              max-width: 100%;
+            }
+            @media (max-width: 490px) {
+              padding-bottom: 10px;
+            }
+          }
+        }
+        &__descr {
+          & > p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            @media (max-width: 490px) {
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+          &.trainings {
+            & > p {
+              padding-bottom: 16px;
+            }
+            .training-list {
+              & > li {
+                display: flex;
+                align-items: center;
+                & > span {
+                  font-weight: 600;
+                  padding-left: 5px;
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+          box-shadow: 4px 4px 16px $shadow;
+          transition: box-shadow 0.3s;
+        }
+        &.trainings {
+          &:hover {
+            box-shadow: none;
+            background-color: $lightBlue;
+            transition: box-shadow 0.3s;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

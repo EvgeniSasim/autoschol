@@ -1,0 +1,107 @@
+.primary-btn,
+input[type="submit"].primary-btn {
+  display: block;
+  box-shadow: -1px -1px 12px rgba(159, 186, 233, 0.24), 2px 1px 12px $primary;
+  border-radius: 12px;
+  border: solid 1px $blue;
+  background-color: $blue;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: $white;
+  padding: 10px 40px;
+  min-width: 226px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $white;
+    color: $primary;
+  }
+  &:active {
+    background-color: $primary;
+    color: $white;
+    border: solid 1px $primary;
+  }
+  &:focus-visible {
+    background-color: $white;
+    color: $primary;
+    outline: 0;
+  }
+}
+.btn-section {
+  background-color: $lightGray;
+  padding-bottom: 24px;
+}
+.btn-list {
+  display: flex;
+  align-items: center;
+  background: $white;
+  border: 1px solid $lightBlue;
+  border-radius: 12px;
+  box-shadow: inset -4px -4px 4px $white, inset 4px 4px 4px $shadow;
+  &__item {
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    box-shadow: initial;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 13px 5px;
+    @media (max-width: 490px) {
+      padding: 13px 2px;
+      min-height: 64px;
+    }
+    & > span {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 130%;
+      text-align: center;
+      letter-spacing: -0.015em;
+      color: $primary;
+      transition: scale 0.5s;
+      @media (max-width: 490px) {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 120%;
+      }
+    }
+    &:hover {
+      & > span {
+        color: $blue;
+      }
+    }
+    &.active {
+      background: $white;
+      padding: 13px 5px;
+      box-shadow: -1px -1px 12px rgba(159, 186, 233, 0.12),
+        2px 1px 12px rgba(159, 186, 233, 0.5);
+      @media (max-width: 490px) {
+        padding: 13px 2px;
+      }
+      & > span {
+        color: $blue;
+      }
+      &:hover {
+        & > span {
+          color: $primary;
+        }
+        transition: scale 0.5s;
+      }
+    }
+  }
+}
+.read-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  box-shadow: initial;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 5px 5px;
+}

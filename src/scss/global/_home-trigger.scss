@@ -1,0 +1,63 @@
+.message-trigger-section {
+  background-color: $lightBlue;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  .container {
+    padding-bottom: 53px;
+    padding-top: 44px;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $lightGray;
+    border-radius: 0px 24px;
+    & > h3 {
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    .trigger-subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 15px;
+      & > p {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 50px;
+        & > span {
+          color: $sky;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 50px;
+        }
+        @media (max-width: 490px) {
+          font-size: 18px;
+          line-height: 26px;
+          text-align: center;
+          & > span {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+    .trigger-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 755px;
+      margin: 0 auto;
+    }
+    .trigger-description {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 21px;
+      text-align: center;
+      @media (max-width: 490px) {
+        & > p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

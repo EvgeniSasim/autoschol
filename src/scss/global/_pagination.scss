@@ -1,0 +1,84 @@
+.pagination-section {
+  margin-bottom: 85px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .testimonials-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > a,
+      & > button {
+        width: 36px;
+        height: 36px;
+        border: none;
+        line-height: 36px;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        color: $sky;
+        box-shadow: -1px -1px 12px rgba(159, 186, 233, 0.24),
+          2px 1px 12px #9fbae9;
+        border-radius: 6px;
+      }
+      & > span {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: -0.015em;
+        text-align: center;
+        background-color: $blue;
+        color: $white;
+        box-shadow: -1px -1px 12px rgba(159, 186, 233, 0.24),
+          2px 1px 12px #9fbae9;
+        border-radius: 6px;
+      }
+      .page-numbers {
+        margin-right: 19px;
+        transition: all 0.5s;
+        &:hover {
+          background-color: $blue;
+          transition: all 0.5s;
+          color: $white;
+        }
+        &.next {
+          margin-right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::after {
+            padding-top: 2px;
+            transition: all 0.5s;
+            content: url(../img/chevron_right.svg);
+          }
+          &:hover {
+            &::after {
+              content: url(../img/chevron_right_white.svg);
+              transition: all 0.5s;
+            }
+          }
+        }
+        &.prev {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &::after {
+            padding-top: 2px;
+            transition: all 0.5s;
+            content: url(../img/chevron_left.svg);
+          }
+          &:hover {
+            &::after {
+              content: url(../img/chevron_left_white.svg);
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

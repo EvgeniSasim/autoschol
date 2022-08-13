@@ -1,0 +1,250 @@
+.turn-in-statistics-section {
+  position: relative;
+  padding-top: 86px;
+  padding-bottom: 96px;
+  background-color: $lightBlue;
+  &::before {
+    content: url(../img/right_elem.svg);
+    position: absolute;
+    bottom: -230px;
+    left: 0;
+    @media (max-width: 870px) {
+      display: none;
+    }
+  }
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    & > h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 54px;
+    }
+    .date-filter-wrapper {
+      padding-bottom: 76px;
+      .date-filter__list {
+        display: flex;
+        box-shadow: inset -4px -4px 4px $white, inset 4px 4px 4px $shadow;
+        border-radius: 8px;
+        background-color: $white;
+        height: 16px;
+        padding-left: 17px;
+        padding-right: 17px;
+        &__item {
+          position: relative;
+          flex: 1;
+          border-left: 1px solid $sky;
+          transition: background-color 0.3s;
+          cursor: pointer;
+          &:last-child {
+            border-right: 1px solid $sky;
+          }
+          &:hover {
+            background-color: $blue;
+            transition: background-color 0.3s;
+          }
+          &.active,
+          &:hover {
+            background-color: $blue;
+            transition: background-color 0.3s;
+            &::after {
+              content: "";
+              position: absolute;
+              top: -16px;
+              width: 100%;
+              height: 16px;
+              border-right: 1px solid #668dbb;
+              margin-left: 1px;
+              transition: border 0.3s;
+            }
+          }
+          &:hover > .top-elem-navi-stats,
+          &.active > .top-elem-navi-stats {
+            position: absolute;
+            top: -16px;
+            width: 100%;
+            height: 16px;
+            border-left: 1px solid #668dbb;
+            margin-left: -1px;
+            transition: border 0.3s;
+            &::after {
+              content: "";
+              position: absolute;
+              top: -10px;
+              width: 8px;
+              max-height: 8px;
+              background-color: $white;
+              border: 3px solid $blue;
+              border-radius: 100%;
+              margin-left: calc(-16px / 3);
+              padding: 2px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: background-color 0.3s;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              top: -10px;
+              right: -7px;
+              width: 8px;
+              max-height: 8px;
+              background-color: $white;
+              border: 3px solid $blue;
+              border-radius: 100%;
+              margin-left: calc(-16px / 3);
+              padding: 2px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: background-color 0.3s;
+            }
+          }
+          & > span {
+            position: absolute;
+            bottom: -30px;
+            transform: translate(-50%, 0px);
+          }
+          & > span.last-date {
+            right: 0;
+            transform: translate(50%, 0px);
+          }
+        }
+      }
+    }
+    .slider-results-wrapper {
+      .slider-results__slides {
+        display: flex;
+        max-width: 365px;
+        &__slide {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          border: 2px solid $lightBlue;
+          box-sizing: border-box;
+          border-radius: 0px 24px;
+          background-color: $white;
+          transition: box-shadow 0.3s;
+          &:hover {
+            box-shadow: 4px 4px 16px $shadow;
+            transition: box-shadow 0.3s;
+          }
+          &__img {
+            margin-bottom: 24px;
+            & > img {
+              width: 100%;
+              object-fit: cover;
+              max-height: 191px;
+              border-radius: 0 24px 0 0;
+            }
+          }
+          &__list {
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 31px;
+            @media (max-width: 380px) {
+              padding-left: 5px;
+              padding-right: 5px;
+            }
+            &__item {
+              display: flex;
+              align-items: center;
+              &:not(:last-child) {
+                padding-bottom: 5px;
+              }
+              & > span {
+                font-size: 15px;
+                @media (max-width: 790px) {
+                  font-size: 14px;
+                }
+                @media (max-width: 340px) {
+                  font-size: 13px;
+                }
+              }
+              & > span:nth-child(1) {
+                color: $primary;
+                font-weight: 600;
+              }
+              &::before {
+                content: url(../img/check__icon.svg);
+                padding-right: 8px;
+                height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  cursor: pointer;
+  filter: drop-shadow(-2px -2px 12px $shadow) drop-shadow(4px 2px 12px $sky);
+  width: 32px;
+  height: 32px;
+  background-color: $blue;
+  border-radius: 100%;
+  top: calc(50% + 52px);
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+  &:active {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+}
+.swiper-button-prev {
+  left: 2px;
+  &::after {
+    content: "";
+    @include bg();
+    background-image: url(../img/arrow_left_slider_btn_icon.svg);
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.swiper-button-next {
+  right: 2px;
+  &::after {
+    content: "";
+    @include bg();
+    background-image: url(../img/arrow_right_slider_btn_icon.svg);
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.swiper-scrollbar {
+  margin-top: 32px;
+  width: 100%;
+  height: 12px;
+  box-shadow: inset -4px -4px 4px $white, inset 4px 4px 4px $shadow;
+  border-radius: 8px;
+  background-color: $lightBlue;
+  display: block !important;
+  &-drag {
+    cursor: pointer;
+    box-shadow: -2px -2px 12px $shadow, 4px 2px 12px $lightBlue;
+    border-radius: 9px;
+    background-color: $blue;
+    max-width: 38px;
+    height: 12px;
+  }
+}

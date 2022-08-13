@@ -1,0 +1,97 @@
+{
+    "key": "group_6284096b9c58a",
+    "title": "Инструктора и преподаватели",
+    "fields": [
+        {
+            "key": "field_6284097d20657",
+            "label": "Кого добавляем, инструктора или преподавателя?",
+            "name": "instructors_or_teachers",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "inst": "Инструктор",
+                "teach": "Преподаватель"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "array",
+            "save_custom": 0
+        },
+        {
+            "key": "field_628a70722762e",
+            "label": "Принадлежность к отзывам",
+            "name": "prinadlezhnost_k_otzyvam",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "post_tag",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_628fbab3ee8f2",
+            "label": "Категория прав",
+            "name": "kategoriya_prav",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "a": "A",
+                "b": "B"
+            },
+            "allow_custom": 0,
+            "default_value": [
+                "b"
+            ],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "array",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "instructors"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1658753742
+}

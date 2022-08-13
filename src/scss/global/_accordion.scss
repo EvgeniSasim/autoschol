@@ -1,0 +1,88 @@
+.accordion {
+  margin-top: 60px;
+  .accordion__item {
+    margin-bottom: 6px;
+    .accordion__item-trigger {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: $white;
+      padding: 10px 0 30px 0;
+      border-bottom: solid 1.2px $graysecond;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      .trigger__num {
+        margin-right: 10px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.035em;
+        color: $white;
+      }
+      .trigger__title {
+        color: $woodsmoke;
+        text-transform: uppercase;
+      }
+      .trigger__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 38px 0 13px;
+        @media (max-width: 360px) {
+          padding: 0 10px 0 13px;
+        }
+        i {
+          color: $primary;
+          font-size: 26px;
+          font-weight: 300;
+          transform: rotate(90deg);
+          animation: fade 0.3s ease;
+          transition: all 0.3s;
+        }
+      }
+    }
+    .accordion__item-content {
+      display: none;
+      animation: fade 0.3s ease;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      .content__text {
+        margin-top: 6px;
+        padding: 11px 0px;
+        color: $woodsmoke;
+        box-sizing: border-box;
+        & > p {
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 30px;
+          a {
+            letter-spacing: -0.02em;
+            text-decoration-line: underline;
+            color: $primary;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150%;
+          }
+        }
+      }
+    }
+  }
+}
+.accordion__item.active {
+  .accordion__item-content {
+    display: block;
+  }
+  .accordion__item-trigger {
+    .trigger__icon {
+      i {
+        transform: rotate(0deg);
+        animation: fade 0.3s ease;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

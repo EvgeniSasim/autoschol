@@ -1,0 +1,85 @@
+.simple-editor {
+  position: relative;
+  &::before {
+    content: url(../img/right_elem.svg);
+    position: absolute;
+    top: -65px;
+    left: 0;
+    transform: translate(0, -50%);
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+  &::after {
+    content: url(../img/left_elem.svg);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    @media (max-width: 950px) {
+      display: none;
+    }
+  }
+  .container {
+    .editor-wrapper {
+      max-width: 762px;
+      margin: 0 auto;
+      img {
+        margin: 0 auto;
+        border-radius: 24px;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        object-fit: contain;
+        height: auto;
+        max-height: 400px;
+      }
+      p {
+        &:not(:last-child) {
+          padding-bottom: 20px;
+          @media (max-width: 1050px) {
+            padding-bottom: 10px;
+          }
+        }
+      }
+      a {
+        text-decoration: underline;
+        color: $blue;
+      }
+      ul,
+      ul li,
+      li {
+        padding: initial;
+      }
+      ul,
+      li,
+      ol {
+        padding-bottom: 15px;
+        padding-left: 15px;
+        @media (max-width: 490px) {
+          padding-bottom: 10px;
+        }
+      }
+      ul li {
+        list-style: disc;
+        &:not(:last-child) {
+          padding-bottom: 15px;
+          @media (max-width: 1050px) {
+            padding-bottom: 10px;
+          }
+        }
+      }
+      ol li {
+        padding-left: 0;
+        list-style: auto;
+        &:not(:last-child) {
+          padding-bottom: 15px;
+          @media (max-width: 1050px) {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

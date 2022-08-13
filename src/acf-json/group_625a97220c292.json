@@ -1,0 +1,743 @@
+{
+    "key": "group_625a97220c292",
+    "title": "Настройки сайта",
+    "fields": [
+        {
+            "key": "field_625a98d6dd618",
+            "label": "Номера телефнов",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625a98f1dd619",
+            "label": "Номера телефонов",
+            "name": "nomera_telefonov",
+            "type": "repeater",
+            "instructions": "Добавленные здесь номера телефонов отображаются в шапке и подвале сайта.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Добавить номер",
+            "sub_fields": [
+                {
+                    "key": "field_625a991fdd61a",
+                    "label": "Введите номер",
+                    "name": "nomer_telefona",
+                    "type": "text",
+                    "instructions": "Рекомендуемый формат ввода: +375(25)931-03-01",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "+375(25)931-03-01",
+                    "placeholder": "+375(25)931-03-01",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_625ab47f54d55",
+            "label": "Почта",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625a9dadd809f",
+            "label": "Email адреса",
+            "name": "email_adresa",
+            "type": "repeater",
+            "instructions": "Добавленные здесь почтовые адреса отображаются в шапке и подвале сайта.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Добавить E-mail",
+            "sub_fields": [
+                {
+                    "key": "field_625a9dadd80a0",
+                    "label": "Введите E-mail",
+                    "name": "vvedite_e-mail",
+                    "type": "email",
+                    "instructions": "Рекомендуемый формат ввода: info@saspdd.by",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "info@saspdd.by",
+                    "placeholder": "info@saspdd.by",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_625ab47e54d54",
+            "label": "Режим работы",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625a9fb18ec4b",
+            "label": "Режим работы",
+            "name": "rezhim_raboty",
+            "type": "repeater",
+            "instructions": "Добавленный здесь режим работы отображается в шапке и подвале сайта.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Добавить",
+            "sub_fields": [
+                {
+                    "key": "field_625a9fb18ec4c",
+                    "label": "Введите день(дни) недели",
+                    "name": "days",
+                    "type": "text",
+                    "instructions": "Рекомендуемый формат ввода: Пн-пт",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Пн-пт",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_625b11c7eafca",
+                    "label": "Введите часы работы",
+                    "name": "hours",
+                    "type": "text",
+                    "instructions": "Рекомендуемый формат ввода 09:00 - 18:00 или выходной",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "09:00 - 18:00",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_625ab47e54d53",
+            "label": "Адреса",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625aa3da2098d",
+            "label": "Адреса",
+            "name": "adresa",
+            "type": "repeater",
+            "instructions": "Добавленные здесь адреса отображаются в шапке и подвале сайта.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Добавить",
+            "sub_fields": [
+                {
+                    "key": "field_625aa3da2098e",
+                    "label": "Введите адрес",
+                    "name": "vvedite_adres",
+                    "type": "text",
+                    "instructions": "Рекомендуемый формат ввода: г. Минск, ул. Якуба Коласа, 1",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "г. Минск, ул. Якуба Коласа, 1",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_625ab405c57f5",
+            "label": "Настройки карты",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625ab3264125f",
+            "label": "Google Map API KEY",
+            "name": "google_map_api_key",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_625ac9616cd96",
+            "label": "Социальные сети",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625ac97a6cd97",
+            "label": "Добавить социальные сети",
+            "name": "dobavit_soczialnye_seti",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_625ac9da6cd98",
+                    "label": "Выбрать социальную сеть",
+                    "name": "vybrat_soczialnuyu_set",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "instagram": "instagram",
+                        "vk": "ВКонтакте",
+                        "facebook": "facebook",
+                        "twitter": "twitter",
+                        "linkedin": "linkedin",
+                        "youtube": "youtube"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 1,
+                    "return_format": "array",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_625acbab6cd99",
+                    "label": "Укажите URL",
+                    "name": "ukazhite_url",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_625ac84abbae3",
+            "label": "Ссылка на компанию руками которой сделан данный сайт)",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625ac89fbbae5",
+            "label": "URL и текст ссылки",
+            "name": "url",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_625acd6fc9c4d",
+            "label": "Настройка подвала сайта",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625acd218db88",
+            "label": "Юридическое название компании",
+            "name": "yuridicheskoe_nazvanie_kompanii",
+            "type": "text",
+            "instructions": "Отображается в подвале сайта",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "ООО «Спецавтошкола плюс»",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_625acddf20f51",
+            "label": "Заголовок колонки с контактами",
+            "name": "zagolovok_kolonki_s_kontaktami",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Контакты:",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_625ace1620f52",
+            "label": "Заголовок колонки где указаны адрес и время работы",
+            "name": "zagolovok_kolonki_gde_ukazany_adres_i_vremya_raboty",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Адрес и время работы:",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_625ace4520f53",
+            "label": "Заголовок колонки с социальными сетями",
+            "name": "zagolovok_kolonki_s_soczialnymi_setyami",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Мы в социальных сетях:",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_625be4a82fdd6",
+            "label": "Кнопка в шапке",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_625be4db2fdd7",
+            "label": "Текст кнопки",
+            "name": "tekst_knopki",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Заказать звонок",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6288a2be17f2b",
+            "label": "Настройки всплывающего окна (Заказать звонок)",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62889d218ebf7",
+            "label": "Всплывающая форма",
+            "name": "id_popup",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_625dad0b0d4c8",
+                "field_625dad180d4c9",
+                "field_625dad710d4ca",
+                "field_625dad890d4cb"
+            ],
+            "display": "group",
+            "layout": "row",
+            "prefix_label": 0,
+            "prefix_name": 1
+        },
+        {
+            "key": "field_628a1fc111ddb",
+            "label": "Настройки всплывающего окна (Оставить отзыв)",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_628a1fc611ddc",
+            "label": "Всплывающая форма",
+            "name": "id_popup_testimonial",
+            "type": "clone",
+            "instructions": "id всплывающего окна можно посмотреть ....",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_625dad0b0d4c8",
+                "field_625dad890d4cb",
+                "field_625be4db2fdd7"
+            ],
+            "display": "group",
+            "layout": "row",
+            "prefix_label": 0,
+            "prefix_name": 1
+        },
+        {
+            "key": "field_62b4baa4ee0af",
+            "label": "Google таблицы",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62b4bad4ee0b0",
+            "label": "API",
+            "name": "api_google_sheets",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62b4baf7ee0b1",
+            "label": "Идентификатор таблицы",
+            "name": "indetifikator_table",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62b4e97741e5e",
+            "label": "Какой диапазон листа читать (сильно большие значения влияют на производительность от 100)",
+            "name": "range_sheets_list",
+            "type": "text",
+            "instructions": "Пример: A1:C10",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62de911c053de",
+            "label": "Внешние отзывы",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_62de9152053df",
+            "label": "Количество отзывов на странице",
+            "name": "quantity_reviews",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1658753485
+}

@@ -1,0 +1,483 @@
+{
+    "key": "group_629cd3831bed8",
+    "title": "Внешние отзывы (Гугл, Яндекс, Видео)",
+    "fields": [
+        {
+            "key": "field_629cd39bee28b",
+            "label": "Выберете источник отзывы",
+            "name": "vyberete_istochnik_otzyvy",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yandex": "Яндекс",
+                "google": "Google",
+                "video": "Видео отзывы",
+                "soc": "Соц сети"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_629cd4f8ee28c",
+            "label": "Имя автора отзывы",
+            "name": "imya_avtora_otzyvy",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "yandex"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "google"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_629cd53fee28d",
+            "label": "Аватар автора",
+            "name": "avatar_avtora",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "yandex"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "google"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_629cd558ee28e",
+            "label": "Дата отзыва",
+            "name": "data_otzyva",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "yandex"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "google"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d.m.Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_629cd64aee291",
+            "label": "Ссылка на видео",
+            "name": "ssylka_na_video",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_629cd5a1ee28f",
+            "label": "Оценка",
+            "name": "oczenka",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "yandex"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "google"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 5,
+            "step": 1
+        },
+        {
+            "key": "field_629cd77c006b9",
+            "label": "Текст отзыва",
+            "name": "tekst_otzyva",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "yandex"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "google"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_629cd5ddee290",
+            "label": "Ссылка на источник отзыва",
+            "name": "ssylka_na_istochnik_otzyva",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "yandex"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "google"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_629d1e394633c",
+            "label": "Название соц сети",
+            "name": "nazvanie_socz_seti",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "soc"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_629d1e7c4633d",
+            "label": "Логотип соц сети",
+            "name": "logotip_socz_seti",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "soc"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_629d1ed24633e",
+            "label": "Ссылка на соц группу",
+            "name": "ssylka_na_socz_gruppu",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "soc"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_629d2ad764a11",
+            "label": "Лого группы",
+            "name": "logo_gruppy",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "soc"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_629d2b5ccbc35",
+            "label": "Название группы",
+            "name": "nazvanie_gruppy",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "soc"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_629d2b0464a12",
+            "label": "Количество подписчиков",
+            "name": "kolichestvo_podpischikov",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_629cd39bee28b",
+                        "operator": "==",
+                        "value": "soc"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "socials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1654467451
+}

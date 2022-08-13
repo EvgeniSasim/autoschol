@@ -1,0 +1,18 @@
+💼 project/
+├──── 📡 build/ - empty directory for compiled project files
+├──── 🧶 node-modules/ - directory for node-modules
+├──┬─ 🗄 src/ - directory for project source files
+│ ├─┬── ⚙ components/ - Components directory
+│ │ ├── 🧩 bem-blocks/ - BEM block directory
+│ │ └─── 🗂 page-blocks/ - directory for typical page blocks, such as header, footer, etc.
+│ ├──── 🔤 fonts/ - font directory
+│ ├──── 🖼 img/ - image directory
+│ ├──── 📑 js/ - JavaScript files directory
+│ ├─┬─ 📜 scss/ - Styles file directory
+│ │ └─── 🧬 base/ - directory for the base styles we will not change
+│ └─┬─ ─ ⛱ svg/ is the directory for SVG files
+│ └─── 🏷 css/ - directory for SVG files to be integrated into CSS
+│
+└──── 🛠 tasks/ - directory for Gulp function modules
+
+Translated with www.DeepL.com/Translator (free version)

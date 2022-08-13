@@ -1,0 +1,293 @@
+.modal-window {
+  position: fixed;
+  visibility: hidden;
+  z-index: 9999999999;
+  opacity: 0;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(68, 68, 68, 0.7);
+  &.outside-review {
+    .container {
+      overflow-y: scroll;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  .container {
+    .wpcf7-response-output {
+      display: none;
+    }
+    &.show {
+      & > .modal-wrapper {
+        & > h3 {
+          display: none;
+        }
+        .modal-wrapper {
+          display: none;
+        }
+        .trigger-subtitle {
+          display: none;
+        }
+        .trigger-form {
+          display: none;
+        }
+        .trigger-description {
+          display: none;
+        }
+      }
+    }
+    &.show {
+      .modal-wrapper {
+        .notification {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    }
+    .modal-wrapper {
+      position: relative;
+      padding-bottom: 53px;
+      padding-top: 44px;
+      background-color: $white;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid $lightGray;
+      border-radius: 0px 24px;
+      .notification {
+        display: none;
+      }
+      @media (max-width: 490px) {
+        padding-bottom: 30px;
+        &.testimonial {
+          padding-bottom: 20px;
+        }
+      }
+      & > h3 {
+        text-align: center;
+        padding-bottom: 15px;
+        @media (max-width: 490px) {
+          font-size: 22px;
+          line-height: 22px;
+          padding-bottom: 10px;
+        }
+      }
+      .trigger-subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 15px;
+        @media (max-width: 490px) {
+          padding-bottom: 10px;
+        }
+        & > p {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 50px;
+          & > span {
+            color: $sky;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 50px;
+          }
+          @media (max-width: 490px) {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            & > span {
+              font-size: 14px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+      .trigger-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 755px;
+        margin: 0 auto;
+      }
+      .trigger-description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 21px;
+        text-align: center;
+        @media (max-width: 490px) {
+          padding-bottom: 15px;
+          & > p {
+            font-size: 13px;
+            line-height: 18px;
+          }
+        }
+      }
+      .close-modal {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/close_btn_blue_icon.svg);
+        @include bg();
+        cursor: pointer;
+      }
+      &.testimonial {
+        .trigger-form {
+          form.wpcf7-form .form-wrapper {
+            & > label.testimonial {
+              width: 100%;
+              margin-bottom: 2rem;
+              textarea {
+                height: 81px;
+                @media (max-width: 490px) {
+                  height: 60px;
+                }
+              }
+              @media (max-width: 490px) {
+                margin-bottom: 1rem;
+              }
+            }
+            & > span {
+              visibility: hidden;
+              position: absolute;
+              z-index: -1;
+            }
+          }
+        }
+        .rank {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &__list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__star {
+              cursor: pointer;
+              width: 24px;
+              height: 24px;
+              @include bg();
+              background-image: url(../img/star_icon.svg);
+              &:not(:last-child) {
+                margin-right: 16px;
+              }
+              &.active {
+                background-image: url(../img/star_icon_bg.svg);
+              }
+              &.invalid {
+                background-image: url(../img/star_red_icon.svg);
+              }
+              @media (max-width: 490px) {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+      .outside-reviews-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: -2rem;
+        margin-bottom: -1rem;
+        padding-bottom: 25px;
+        @media (max-width: 850px) {
+          margin-left: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .outside-reviews-img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: calc(1 / 2 * 100% - 2rem);
+          margin-left: 2rem;
+          margin-bottom: 1rem;
+          filter: drop-shadow(4px 4px 16px rgba(191, 207, 236, 0.4));
+          border-radius: 24px;
+          @media (max-width: 850px) {
+            margin-left: 0;
+            width: 100%;
+          }
+          & > img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 100%;
+            object-fit: cover;
+            height: auto;
+            border-radius: 24px;
+          }
+          @media (max-width: 850px) {
+            margin-left: 0;
+          }
+        }
+        .outside-reviews-description {
+          width: calc(1 / 2 * 100% - 2rem);
+          margin-left: 2rem;
+          margin-bottom: 1rem;
+          @media (max-width: 850px) {
+            margin-left: 0;
+            width: 100%;
+          }
+          p {
+            &:not(:last-child) {
+              padding-bottom: 20px;
+              @media (max-width: 1050px) {
+                padding-bottom: 10px;
+              }
+            }
+          }
+          a {
+            text-decoration: underline;
+            color: $blue;
+          }
+          ul li {
+            list-style: disc;
+            margin-left: 25px;
+          }
+          ol li {
+            &:not(:last-child) {
+              padding-bottom: 25px;
+              @media (max-width: 1050px) {
+                padding-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+      .outside-reviews-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+    @media (max-width: 490px) {
+      form.wpcf7-form input[type="tel"],
+      form.wpcf7-form input[type="text"] {
+        min-width: 220px;
+        width: 100%;
+        max-width: 265px;
+      }
+    }
+  }
+}

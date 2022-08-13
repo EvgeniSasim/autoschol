@@ -1,0 +1,33 @@
+.breadcrumbs-section {
+  padding-top: 33px;
+  padding-bottom: 20px;
+  @media (max-width: 490px) {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .breadcrumbs-page {
+      text-align: center;
+      span {
+        font-size: 12px;
+        & > a {
+          color: $primary;
+          opacity: 0.6;
+        }
+        & > i {
+          color: $primary;
+          opacity: 0.6;
+
+          padding: 0 2px;
+        }
+        span.breadcrumb_last {
+          color: $blue;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

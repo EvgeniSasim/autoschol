@@ -1,0 +1,23 @@
+section.title-section {
+  .container {
+    & > h1 {
+      text-align: center;
+      padding-bottom: 21px;
+    }
+    .title-section__subtitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 21px;
+      & > span {
+        max-width: 800px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 28px;
+        @media (max-width: 490px) {
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
